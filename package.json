@@ -1,0 +1,15 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Formation P3 FROMENTE for \"ohmyfood\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Repository local"
+  },
+  "author": "FROMENTE Quentin",
+  "license": "ISC"
+}
