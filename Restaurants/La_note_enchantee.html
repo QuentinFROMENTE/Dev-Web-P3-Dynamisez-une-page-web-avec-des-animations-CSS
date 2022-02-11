@@ -2,195 +2,200 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>Ohmyfood : À la française</title>
+        <title>Ohmyfood : La note enchantée</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/styles.css">
         <meta name="author" content="Quentin FROMENTÉ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     </head>
     <body>
-        <header>
-            <a href="../index.html">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <picture>
-                <source srcset="../Assets/Logo/ohmyfood@2x.svg">
+        <header class="header">
+            <div class="header__title header__back-arrow">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left header__title header__back-arrow"></i>
+                </a>
+            </div>
+            <div class="header header__title">
                 <img src="../Assets/Logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
-            </picture>
+            </div>
         </header>
-        <section>
-            <picture>
-                <source srcset="../Assets/Photos/stil-u2Lp8tXIcjw-unsplash.jpg">
-                <img src="../Assets/Photos/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-            </picture>
-            <div>
-                <div>
+        <picture class="carte carte__photo">
+            <img src="../Assets/Photos/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="carte carte__photo">
+        </picture>
+        <section class="carte">
+            <div class="carte carte__menu">
+                <div class="carte__menu--nom cascade__position1">
                     <p>La note enchantée</p>
-                    <i class="far fa-heart"></i>
+                    <div class="favoris">
+                        <i class="far fa-heart navigation__miniature--icone favoris1"></i>
+                        <i class="fas fa-heart navigation__miniature--icone favoris2"></i>
+                    </div>
                 </div>
                 <div>
                     <form method="post" action="#">
-                        <div>
-                            <h4>ENTRÉES</h4>
+                        <div class="carte carte__menu--type">
+                            <h4 class="cascade__position2">ENTRÉES</h4>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_entre_1">
-                                <div>
-                                    <h3>Ravioles de fois gras</h3>
-                                    <p>Accompagnés de leur crème à la truffe</p>
+                        <div class="selection cascade__position3">
+                            <input type="checkbox" name="Note_entre_1" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Ravioles de foie gras</h3>
+                                    <p class="selection__nom--recette">Accompagnés de leur crème à la truffe</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>25€</p>
                                 </div>
                             <label for="Note_entre_1">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_entre_2">
-                                <div>
-                                    <h3>Caviar osciètre</h3>
-                                    <p>Sur blini à la farine de blé noir</p>
+                        <div class="selection cascade__position4">
+                            <input type="checkbox" name="Note_entre_2" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Caviar osciètre</h3>
+                                    <p class="selection__nom--recette">Sur blini à la farine de blè noir</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>35€</p>
                                 </div>
                             <label for="Note_entre_2">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_entre_3">
-                                <div>
-                                    <h3>Homard et espuma de potiron</h3>
-                                    <p>Mariné aux zetes d'orange</p>
+                        <div class="selection cascade__position5">
+                            <input type="checkbox" name="Note_entre_3" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Homard et espuma de potiron</h3>
+                                    <p class="selection__nom--recette">Mariné aux zests d'orange</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>20€</p>
                                 </div>
                             <label for="Note_entre_3">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_entre_4">
-                                <div>
-                                    <h3>Foie gras de canard cuit entier</h3>
-                                    <p>Configure de figue et pain toasté</p>
+                        <div class="selection cascade__position6">
+                            <input type="checkbox" name="Note_entre_4" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Foie gras de canard cuit entier</h3>
+                                    <p class="selection__nom--recette">Confiture de figue et pain toasté</p>
                                 </div>
-                                <div>
-                                    <p>35€</p>
+                                <div class="selection__prix">
+                                    <p>20€</p>
                                 </div>
                             <label for="Note_entre_4">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <h4>PLATS</h4>
+                        <div class="carte carte__menu--type">
+                            <h4 class="cascade__position7">PLATS</h4>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_plat_1">
-                                <div>
-                                    <h3>Noix de coquilles Saint-Jacques</h3>
-                                    <p>Sur lit de purée de céleri-rave</p>
+                        <div class="selection cascade__position8">
+                            <input type="checkbox" name="Note_plat_1" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Noix de coquilles Saint-Jacques</h3>
+                                    <p class="selection__nom--recette">Sur lit de purée de céleri-rave</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>40€</p>
                                 </div>
                             <label for="Note_plat_1">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_plat_2">
-                                <div>
-                                    <h3>Langoustine poêlée</h3>
-                                    <p>Purée de patate douce</p>
+                        <div class="selection cascade__position9">
+                            <input type="checkbox" name="Note_plat_2" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Langoustine poêlée</h3>
+                                    <p class="selection__nom--recette">Purée de patate douce</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>35€</p>
                                 </div>
                             <label for="Note_plat_2">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_plat_3">
-                                <div>
-                                    <h3>Mijoté de queue de boeuf</h3>
-                                    <p>Et riz sauvage aux zests de citron</p>
+                        <div class="selection cascade__position10">
+                            <input type="checkbox" name="Note_plat_3" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Mijoté de queue de boeuf</h3>
+                                    <p class="selection__nom--recette">Et riz sauvage aux zests de citron</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>44€</p>
                                 </div>
                             <label for="Note_plat_3">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <h4>DESSERTS</h4>
+                        <div class="carte carte__menu--type">
+                            <h4 class="cascade__position11">DESSERTS</h4>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_dessert_1">
-                                <div>
-                                    <h3>Macaron noisette et chocolat</h3>
-                                    <p>Glace au caramel brun et sel de Guérande</p>
+                        <div class="selection cascade__position12">
+                            <input type="checkbox" name="Note_dessert_1" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Macaron noisette et chocolat</h3>
+                                    <p class="selection__nom--recette">Glace au caramel brunet sel de guérande</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>18€</p>
                                 </div>
                             <label for="Note_dessert_1">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_dessert_2">
-                                <div>
-                                    <h3>Baba au rhum revisité</h3>
-                                    <p>Avec son coulis de citron</p>
+                        <div class="selection cascade__position13">
+                            <input type="checkbox" name="Note_dessert_2" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Baba au rhum revisité</h3>
+                                    <p class="selection__nom--recette">Avec son coulis de citron</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>22€</p>
                                 </div>
                             <label for="Note_dessert_2">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="Note_dessert_3">
-                                <div>
-                                    <h3>Tarte au citron meringuée</h3>
-                                    <p>Descruturée</p>
+                        <div class="selection cascade__position14">
+                            <input type="checkbox" name="Note_dessert_3" class="selection--checkbox">
+                                <div class="selection__nom">
+                                    <h3 class="selection__nom--nom">Tarte au citron meringuée</h3>
+                                    <p class="selection__nom--recette">Destructuée</p>
                                 </div>
-                                <div>
+                                <div class="selection__prix">
                                     <p>23€</p>
                                 </div>
                             <label for="Note_dessert_3">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle selection__validation"></i>
                             </label>
                         </div>
-                        <div>
-                            <input type="button" value="Commander">
+                        <div class="cascade__position15">
+                            <input type="button" value="Commander" class="button">
                         </div>
                     </form>
                 </div>
             </div>
         </section>
-        <footer>
-            <picture>
-                <source srcset="../Assets/Logo/ohmyfood@2x.svg">
-                <img src="../Assets/Logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
-            </picture>
-            <a href="#">
-                <i class="fas fa-utensils"></i>Proposer un restaurant
+        <footer class="footer">
+            <p class="footer__fonts footer__fonts--logo">ohmyfood</p>
+            <a href="#" class="footer__fonts">
+                <p class="footer__fonts footer__fonts--texte">
+                <i class="fas fa-utensils footer__fonts--icone"></i>
+                Proposer un restaurant</p>
             </a>
-            <a href="#">
-                <i class="fas fa-hands-helping"></i>Devenir partenaire
+            <a href="#" class="footer__fonts">
+                <p class="footer__fonts footer__fonts--texte">
+                    <i class="fas fa-hands-helping footer__fonts--icone footer__fonts--taille"></i>
+                    Devenir partenaire</p>
             </a>
-            <a href="#">
-                Mentions légales
+            <a href="#" class="footer__fonts">
+                <p class="footer__fonts footer__fonts--texte">Mentions légales</p>
             </a>
-            <a href="mailto:contact@ohmyfood.fr">
-                Contact
+            <a href="mailto:contact@ohmyfood.fr" class="footer__fonts">
+                <p class="footer__fonts footer__fonts--texte">Contact</p>
             </a>
         </footer>
     </body>

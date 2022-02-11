@@ -1,0 +1,35 @@
+.carte {
+    width: 100%;
+    overflow: visible;
+    &__photo {
+        width: 100%;
+        height: 18rem;
+        max-width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    &__menu {
+        background-color: $background-lightgrey;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2rem 2rem 0rem 0rem;
+        position: relative;
+        bottom: 2rem;
+        &--nom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Shrikhand";
+            flex-direction: row;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-top: 1rem;
+        }
+        &--type {
+            font-size: 1rem;
+            padding-left: 1rem;
+            font-weight: lighter;
+        }
+    }
+}

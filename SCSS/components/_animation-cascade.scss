@@ -1,0 +1,7 @@
+@mixin animation-cascade ($ordre) {   
+    @each $position, $duree in $ordre {
+        &__#{$position} {
+            animation: cascade 1s $duree both ease-in-out ;
+        }
+    }
+}

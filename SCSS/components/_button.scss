@@ -1,0 +1,14 @@
+@mixin purple_button {
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 3rem;
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(to top, $color-primary, $color-secondary);
+    text-decoration: none;
+    align-self: center;
+    align-items: center;
+}

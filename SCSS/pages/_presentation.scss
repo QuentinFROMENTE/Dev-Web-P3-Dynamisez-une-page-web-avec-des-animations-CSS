@@ -1,0 +1,45 @@
+.presentation {
+    background-color: $background-lightgrey;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.1rem;
+    padding-bottom: 2rem;
+    &__localisation {
+        background-color: $background-darkerlightgrey;
+        font-size: 1.1rem;
+        font-weight: bold;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 0rem;
+        &--lieu, &--map-marker {
+            display: inline-block;
+            align-self: center;
+            padding-right: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+    }
+    &__concept {
+        display: flex;
+        h1 {
+            text-align: center;
+            align-self: center;
+            width: 60%;
+            padding-top: 2rem;
+            font-weight: bold;
+        }
+        &--texte {
+            text-align: center;
+            align-self: center;
+            width: 70%;
+            font-weight: lighter;
+            padding-top: 1rem
+        }
+        &--button {
+            @include purple_button;
+            font-weight: normal;
+            align-self: center;
+        }
+    }
+}    

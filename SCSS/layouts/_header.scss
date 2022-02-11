@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    height: 5rem;
+    background-color: $background-lightgrey;
+    box-shadow: 0rem 0.2rem .2rem rgba($color: #000000, $alpha: 0.6);
+    display: flex;
+    justify-content: center;
+    &__title {
+        position: relative;
+        align-self: center;
+        height: 3rem;
+        width: auto;
+        border: none;
+        box-shadow: none;
+    }
+    &__back-arrow {
+        font-size: 2rem;
+        align-self: center;
+        height: 2rem;
+        width: 2rem;
+        right: 1.3rem;
+        color: #000000;
+        overflow: visible;
+    }
+}
