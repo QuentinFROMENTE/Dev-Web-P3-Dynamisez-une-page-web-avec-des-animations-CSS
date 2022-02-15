@@ -1,14 +1,36 @@
 .favoris1 {
     position: relative;
-    left: 20rem;
+    left: 0.2rem;
+    bottom: -0.2rem;
     z-index: 1;
     opacity: 1;
+    &--carte {
+        position: relative;
+        left: 0.2rem;
+        bottom: -0.2rem;
+        opacity: 1;
+        z-index: 1;
+    }
 }
+
 .favoris2 {
-    left: 18.3rem;
-    bottom: 3rem;
+    left: 0.2rem;
+    bottom: 1.5rem;
     opacity: 0;
-    color: $color-primary;
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    &--carte {
+        position: relative;
+        left: -1.6rem;
+        bottom: -0.2rem;
+        opacity: 0;
+        background: linear-gradient(to bottom, $color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 .favoris {
@@ -16,7 +38,17 @@
     height: 2rem;
     width: 2rem;
     position: relative;
+    bottom: 3.5rem;
+    left: 18rem;
+    z-index: 1;
+    &--carte {
+        position: relative;
+        bottom: 0rem;
+        left: 2rem;
+        z-index: 1;
+    }
 }
+
 
 .favoris:hover {
         cursor: pointer;
@@ -28,38 +60,14 @@
     }
 }
 
-.validation {
-    height: $height-selection;
-    width: $height-selection;
-    background-color: $color-tertiary;
-    color: white;
-    &--checked {
-        color: white;
+.favoris--carte:hover {
+    cursor: pointer;
+    & > .favoris1--carte {
+        animation: favoris1 1s both ease-in-out;
     }
-}
-
-.validation-checked {
-    display: none;
-}
-
-.test:hover + .validation {
-        animation: validation 1s both ease-in-out;
-        i {
-            animation: checked 1s both ease-in-out;
-        }
-}
-
-
-.utensils {
-    animation: utensils 2s ease-in-out;
-}
-
-.nom {
-    animation: nom 2s ease-in-out forwards;
-}
-
-.cascade {
-    @include animation-cascade ($position-cascade);
+    & > .favoris2--carte {
+        animation: favoris2 1s both ease-in-out;
+    }
 }
 
 @keyframes favoris1 {
@@ -88,41 +96,33 @@
     }
 }
 
-@keyframes utensils {
-    0% {
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-    }
-    100% {
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
+.validation {
+    visibility: hidden;
+    width: $height-selection;
+    height: $height-selection;
+    background-color: $color-tertiary;
+    color: white;
+    &--checked {
+        color: white;
     }
 }
 
-@keyframes nom {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+.validation-checked {
+    display: none;
 }
 
-@keyframes cascade {
-    0% {
-        opacity: 0;
-        transform: translateY(-2rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+.choix:hover .validation {
+    visibility: visible;
+    animation: validation 1s both ease-in-out;
+    i {
+        animation: checked 1s both ease-in-out;
     }
 }
 
 @keyframes validation {
     0% {
         -moz-transform: translateX($height-selection);
-        -webkit-transform:  translateX($height-selection);
+        -webkit-transform: translateX($height-selection);
         -ms-transform: translateX($height-selection);
         -o-transform: translateX($height-selection);
     }
@@ -146,5 +146,64 @@
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
+    }
+}
+
+.loader {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100rem;
+    visibility: visible;
+    animation: loader 2s backwards;
+    background-color: white;
+    opacity: 0;
+}
+
+.utensils {
+    animation: utensils 2s ease-in-out;
+}
+
+.nom {
+    animation: nom 2s ease-in-out forwards;
+    font-family: "Shrikhand";
+}
+
+@keyframes utensils {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cascade {
+    @include animation-cascade ($position-cascade);
+}
+
+@keyframes cascade {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

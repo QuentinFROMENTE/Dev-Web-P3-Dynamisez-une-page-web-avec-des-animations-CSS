@@ -92,15 +92,18 @@ body {
   text-decoration: none;
   align-self: center;
   align-items: center;
+  font-weight: bold;
+  border: none;
   font-weight: normal;
   align-self: center;
+  width: auto;
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   overflow-y: hidden;
 }
 .fonctionnement--texte {
@@ -193,7 +196,7 @@ body {
 }
 .navigation__miniature--photo {
   width: 100%;
-  height: 12rem;
+  height: 11rem;
   max-width: 100%;
   object-fit: cover;
   margin-left: 0%;
@@ -203,9 +206,10 @@ body {
 }
 .navigation__miniature--nouveau {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding-top: 1%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
   height: 1.5rem;
   width: 19%;
   padding-left: 1rem;
@@ -214,23 +218,25 @@ body {
   color: #2D9F83;
   border-radius: 0.2rem;
   position: relative;
-  bottom: 15rem;
-  left: 15rem;
+  bottom: 19rem;
+  left: 14rem;
   z-index: 2;
 }
-.navigation__miniature h2 {
+.navigation__miniature--nom {
   color: #000000;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding-left: 5%;
-  position: relative;
-  bottom: 0rem;
+  height: 5rem;
+  padding-top: 0.8rem;
+}
+.navigation__miniature--nom h2 {
+  font-size: 1.3rem;
 }
 .navigation__miniature--localisation {
   color: #000000;
-  font-size: 0.8rem;
-  padding-left: 5%;
-  position: relative;
-  bottom: 0rem;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  padding-top: 0.5rem;
 }
 .navigation__miniature--icone {
   font-size: 1.5rem;
@@ -246,6 +252,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 10rem;
+  padding-bottom: 2rem;
 }
 .footer__fonts {
   display: flex;
@@ -269,8 +276,10 @@ body {
 }
 .footer__fonts--logo {
   font-family: "Shrikhand";
-  font-size: 2rem;
+  font-size: 1.1rem;
   padding-left: 2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
   color: #F2F2F2;
 }
 
@@ -302,12 +311,16 @@ body {
   flex-direction: row;
   padding-right: 2rem;
   padding-left: 2rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.6rem;
 }
 .carte__menu--type {
   font-size: 1rem;
   padding-left: 1rem;
   font-weight: lighter;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .selection {
@@ -318,7 +331,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin-left: 2.5%;
-  height: 3rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .selection--checkbox {
   display: none;
@@ -327,16 +342,25 @@ body {
   flex-direction: column;
 }
 .selection__nom--nom {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
   font-family: "Roboto";
 }
 .selection__nom--recette {
-  font-family: "Roboto lighter";
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-family: "Roboto";
+  font-weight: lighter;
 }
 .selection__prix {
   align-self: flex-end;
 }
 .selection__validation {
   content: "";
+  font-size: 2rem;
+  position: relative;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 
 .button {
@@ -352,20 +376,44 @@ body {
   text-decoration: none;
   align-self: center;
   align-items: center;
+  font-weight: bold;
+  border: none;
+  margin-left: 25%;
 }
 
 .favoris1 {
   position: relative;
-  left: 20rem;
+  left: 0.2rem;
+  bottom: -0.2rem;
   z-index: 1;
   opacity: 1;
 }
+.favoris1--carte {
+  position: relative;
+  left: 0.2rem;
+  bottom: -0.2rem;
+  opacity: 1;
+  z-index: 1;
+}
 
 .favoris2 {
-  left: 18.3rem;
-  bottom: 3rem;
+  left: 0.2rem;
+  bottom: 1.5rem;
   opacity: 0;
-  color: #9356DC;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.favoris2--carte {
+  position: relative;
+  left: -1.6rem;
+  bottom: -0.2rem;
+  opacity: 0;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .favoris {
@@ -373,6 +421,15 @@ body {
   height: 2rem;
   width: 2rem;
   position: relative;
+  bottom: 3.5rem;
+  left: 18rem;
+  z-index: 1;
+}
+.favoris--carte {
+  position: relative;
+  bottom: 0rem;
+  left: 2rem;
+  z-index: 1;
 }
 
 .favoris:hover {
@@ -385,9 +442,44 @@ body {
   animation: favoris2 1s both ease-in-out;
 }
 
+.favoris--carte:hover {
+  cursor: pointer;
+}
+.favoris--carte:hover > .favoris1--carte {
+  animation: favoris1 1s both ease-in-out;
+}
+.favoris--carte:hover > .favoris2--carte {
+  animation: favoris2 1s both ease-in-out;
+}
+
+@keyframes favoris1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes favoris2 {
+  0% {
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    opacity: 1;
+  }
+}
 .validation {
-  height: 3rem;
-  width: 3rem;
+  visibility: hidden;
+  width: 5rem;
+  height: 5rem;
   background-color: #99E2D0;
   color: white;
 }
@@ -399,11 +491,51 @@ body {
   display: none;
 }
 
-.test:hover + .validation {
+.choix:hover .validation {
+  visibility: visible;
   animation: validation 1s both ease-in-out;
 }
-.test:hover + .validation i {
+.choix:hover .validation i {
   animation: checked 1s both ease-in-out;
+}
+
+@keyframes validation {
+  0% {
+    -moz-transform: translateX(5rem);
+    -webkit-transform: translateX(5rem);
+    -ms-transform: translateX(5rem);
+    -o-transform: translateX(5rem);
+  }
+  100% {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+@keyframes checked {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.loader {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100rem;
+  visibility: visible;
+  animation: loader 2s backwards;
+  background-color: white;
+  opacity: 0;
 }
 
 .utensils {
@@ -412,8 +544,31 @@ body {
 
 .nom {
   animation: nom 2s ease-in-out forwards;
+  font-family: "Shrikhand";
 }
 
+@keyframes utensils {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cascade__position1 {
   animation: cascade 1s 100ms both ease-in-out;
 }
@@ -474,53 +629,52 @@ body {
 .cascade__position20 {
   animation: cascade 1s 2000ms both ease-in-out;
 }
+.cascade__position21 {
+  animation: cascade 1s 2100ms both ease-in-out;
+}
+.cascade__position22 {
+  animation: cascade 1s 2200ms both ease-in-out;
+}
+.cascade__position23 {
+  animation: cascade 1s 2300ms both ease-in-out;
+}
+.cascade__position24 {
+  animation: cascade 1s 2400ms both ease-in-out;
+}
+.cascade__position25 {
+  animation: cascade 1s 2500ms both ease-in-out;
+}
+.cascade__position26 {
+  animation: cascade 1s 2600ms both ease-in-out;
+}
+.cascade__position27 {
+  animation: cascade 1s 2700ms both ease-in-out;
+}
+.cascade__position28 {
+  animation: cascade 1s 2800ms both ease-in-out;
+}
+.cascade__position29 {
+  animation: cascade 1s 2900ms both ease-in-out;
+}
+.cascade__position30 {
+  animation: cascade 1s 3000ms both ease-in-out;
+}
+.cascade__position31 {
+  animation: cascade 1s 3100ms both ease-in-out;
+}
+.cascade__position32 {
+  animation: cascade 1s 3200ms both ease-in-out;
+}
+.cascade__position33 {
+  animation: cascade 1s 3300ms both ease-in-out;
+}
+.cascade__position34 {
+  animation: cascade 1s 3400ms both ease-in-out;
+}
+.cascade__position35 {
+  animation: cascade 1s 3500ms both ease-in-out;
+}
 
-@keyframes favoris1 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes favoris2 {
-  0% {
-    -moz-transform: scale(0);
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes utensils {
-  0% {
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-}
-@keyframes nom {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes cascade {
   0% {
     opacity: 0;
@@ -529,34 +683,6 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@keyframes validation {
-  0% {
-    -moz-transform: translateX(3rem);
-    -webkit-transform: translateX(3rem);
-    -ms-transform: translateX(3rem);
-    -o-transform: translateX(3rem);
-  }
-  100% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-  }
-}
-@keyframes checked {
-  0% {
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
   }
 }
 

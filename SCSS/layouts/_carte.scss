@@ -24,12 +24,16 @@
             flex-direction: row;
             padding-right: 2rem;
             padding-left: 2rem;
-            padding-top: 1rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.6rem;
         }
         &--type {
             font-size: 1rem;
             padding-left: 1rem;
             font-weight: lighter;
+            padding-bottom: 1rem;
+            padding-top: 2rem;
         }
     }
 }
