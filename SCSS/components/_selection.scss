@@ -4,30 +4,55 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
     margin-left: 2.5%;
     height: $height-selection;
     margin-bottom: 1rem;
     box-shadow: 0rem 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.1);
+    @media screen and (min-width: 1024px) {
+        width: 45%;
+        margin-left: 27.5%;
+    }
     &--checkbox {
         display: none;
     }
     &__nom {
+        z-index: 1;
         flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         &--nom {
             padding-top: 0.5rem;
             padding-left: 1rem;
             font-family: "Roboto";
+            height: 1.5rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &--recette {
             padding-top: 1rem;
             padding-left: 1rem;
             font-family: "Roboto";
             font-weight: lighter;
+            height: 1.4rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
     &__prix {
         align-self: flex-end;
+        width: 4rem;
+        z-index: 3;
+        padding-bottom: 0.5rem;
+        @supports not( -moz-appearance:none ){
+            position: relative;
+            left: 5rem;    
+        }
     }
     &__validation {
         content: "";
@@ -36,6 +61,22 @@
         top: 1.5rem;
         left: 1.5rem;
     }
+    &__animation {
+        background-color: white;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        z-index: -1;
+        visibility: collapse;
+        line-height: 0;
+        /*display: none;*/
+    }
+}
+
+.choix:hover .selection__animation {
+    z-index: 2;
+    visibility: visible;
 }
 
 .button {

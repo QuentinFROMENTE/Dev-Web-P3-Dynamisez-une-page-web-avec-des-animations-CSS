@@ -1,4 +1,5 @@
 .footer {
+    clear: both;
     background-color: #333333;
     width: 100%;
     display: flex;
@@ -13,6 +14,7 @@
         padding-left: 3%;
         flex-direction: row;
         align-items: center;
+        overflow-y: hidden;
         &--texte{
             width: 80%;
             margin-top: 0.3rem;

@@ -7,6 +7,9 @@
         max-width: 100%;
         object-fit: cover;
         position: relative;
+        @media screen and (min-width:1024px) {
+            height: 30rem;
+        }
     }
     &__menu {
         background-color: $background-lightgrey;
@@ -27,6 +30,10 @@
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
             font-size: 1.6rem;
+            @media screen and (min-width: 1024px) {
+                padding-left: 15%;
+                padding-right: 15%;
+            }
         }
         &--type {
             font-size: 1rem;
@@ -34,6 +41,16 @@
             font-weight: lighter;
             padding-bottom: 1rem;
             padding-top: 2rem;
+            text-decoration: underline $color-tertiary;
+            text-decoration-thickness: 0.3rem ;
+            @media screen and (min-width: 1024px) {
+                text-align: center;
+                padding-left: 0;
+            }
         }
     }
+}
+
+.font {
+    background-color: $background-lightgrey;
 }

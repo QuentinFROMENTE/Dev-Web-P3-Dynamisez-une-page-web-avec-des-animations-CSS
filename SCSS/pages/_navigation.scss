@@ -3,8 +3,14 @@
     background-color: $background-lightgrey;
     padding-top: 3rem;
     padding-bottom: 2rem;
+    @media screen and (min-width: 429px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     & h1 {
         padding-left: 5%;
+        width: 100%;
     }
     & a{
         text-decoration: none;
@@ -22,6 +28,12 @@
         margin-bottom: 2rem;
         padding-bottom: 0rem;
         padding-top: 0rem;
+        @media screen and (min-width: 429px) and (max-width: 1440px) {
+            width: 42.5%;
+        }
+        @media screen and (min-width: 1441px) {
+            width: 19%;
+        }
         &--photo {
             width: 100%;
             height: 11rem;
@@ -33,21 +45,20 @@
             margin-bottom: 0rem;
         }
         &--nouveau {
-            display: inline-block;
             font-size: 1rem;
             font-weight: bold;
             padding-top: 0.5rem;
             padding-bottom: 0.2rem;
             height: 1.5rem;
-            width: 19%;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            width: fit-content;
+            padding-left: 5%;
+            padding-right: 5%;
             background-color: $color-tertiary;
             color: #2D9F83;
             border-radius: 0.2rem;
             position: relative;
             bottom: 19rem;
-            left: 14rem;
+            left: 60%;
             z-index: 2;
         }
         &--nom {
@@ -71,7 +82,7 @@
             color: #000000;
             position: relative;
             bottom: 1rem;
-            left: 18rem;
+            left: 75%;
         }
     }
 }

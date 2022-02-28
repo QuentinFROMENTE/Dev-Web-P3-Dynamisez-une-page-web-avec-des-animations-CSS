@@ -14,8 +14,8 @@
 }
 
 .favoris2 {
-    left: 0.2rem;
-    bottom: 1.5rem;
+    left: 0.21rem;
+    bottom: 1.53rem;
     opacity: 0;
     background: linear-gradient(to bottom, $color-primary, $color-secondary);
     background-clip: text;
@@ -39,7 +39,7 @@
     width: 2rem;
     position: relative;
     bottom: 3.5rem;
-    left: 18rem;
+    left: 85%;
     z-index: 1;
     &--carte {
         position: relative;
@@ -98,10 +98,13 @@
 
 .validation {
     visibility: hidden;
-    width: $height-selection;
+    width: 8rem;
     height: $height-selection;
     background-color: $color-tertiary;
     color: white;
+    @media screen and (min-width: 429px) {
+        width: 7rem;
+    }
     &--checked {
         color: white;
     }
@@ -111,8 +114,14 @@
     display: none;
 }
 
+.choix:hover .animation--prix {
+    animation: validation 1s backwards ease-in-out;
+    left: 0rem;
+}
+
 .choix:hover .validation {
     visibility: visible;
+    /*display: contents;*/
     animation: validation 1s both ease-in-out;
     i {
         animation: checked 1s both ease-in-out;
@@ -153,6 +162,7 @@
     position: absolute;
     width: 100%;
     height: 100rem;
+    font-size: 4rem;
     visibility: visible;
     animation: loader 2s backwards;
     background-color: white;
@@ -162,11 +172,36 @@
 
 .utensils {
     animation: utensils 2s ease-in-out;
+    position: absolute;
+    margin-left: 35%;
+    height: 4rem;
+    @media screen and (min-width: 429px) and (max-width: 1023px) {
+        margin-left: 20%;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        margin-left: 15%;
+    }
+    @media screen and (min-width: 1440px) {
+        margin-left: 10%;
+    }
 }
 
 .nom {
     animation: nom 2s ease-in-out forwards;
     font-family: "Shrikhand";
+    position: absolute;
+    top: 20rem;
+    width: 100%;
+    margin-left: 5%;
+    @media screen and (min-width: 429px) and (max-width: 1023px) {
+        margin-left: 25%;
+    }
+    @media screen and (min-width :1024px) {
+        margin-left: 30%;
+    }
+    @media screen and (min-width: 1440px) {
+        margin-left: 35%;
+    }
 }
 
 @keyframes utensils {
@@ -189,9 +224,12 @@
         z-index: 2;
         opacity: 1;
     }
+    90% {
+        opacity: 1;
+    }
     100% {
         z-index: 2;
-        opacity: 1;
+        opacity: 0;
     }
 }
 

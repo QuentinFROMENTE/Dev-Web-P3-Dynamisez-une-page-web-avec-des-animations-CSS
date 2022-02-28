@@ -2,13 +2,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Ohmyfood : À la française</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/styles.css">
         <meta name="author" content="Quentin FROMENTÉ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     </head>
-    <body>
+    <body class="font">
         <header class="header">
             <div class="header__title header__back-arrow">
                 <a href="../index.html">
@@ -36,18 +37,21 @@
                         <div class="carte carte__menu--type">
                             <h4 class="cascade__position2">ENTRÉES</h4>
                         </div>
+
                         <div class="selection cascade__position3 choix">
                             <input type="checkbox" name="Francaise_entre_1" class="selection--checkbox">
                                 <div class="selection__nom">
                                     <h3 class="selection__nom--nom">Tartare de poulpe acidulé</h3>
                                     <p class="selection__nom--recette">Aux zests d'orange</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>25€</p>
                                 </div>
-                            <label for="Francaise_entre_1">
-                                <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
-                            </label>
+                            <div class="selection__animation">
+                                <label for="Francaise_entre_1">
+                                    <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
+                                </label>
+                            </div>
                         </div>
                         <div class="selection cascade__position4 choix">
                             <input type="checkbox" name="Francaise_entre_2" class="selection--checkbox">
@@ -55,12 +59,14 @@
                                     <h3 class="selection__nom--nom">Velouté de légumes d'antan</h3>
                                     <p class="selection__nom--recette">Carotte, panais, topinambour</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>20€</p>
                                 </div>
-                            <label for="Francaise_entre_2">
-                                <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
-                            </label>
+                            <div class="selection__animation">
+                                <label for="Francaise_entre_2">
+                                    <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
+                                </label>
+                            </div>
                         </div>
                         <div class="selection cascade__position5 choix">
                             <input type="checkbox" name="Francaise_entre_3" class="selection--checkbox">
@@ -68,12 +74,14 @@
                                     <h3 class="selection__nom--nom">Soupe à l'oignon</h3>
                                     <p class="selection__nom--recette">Revisitée</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>20€</p>
                                 </div>
-                            <label for="Francaise_entre_3">
-                                <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
-                            </label>
+                            <div class="selection__animation">
+                                <label for="Francaise_entre_3">
+                                    <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
+                                </label>
+                            </div>
                         </div>
                         <div class="carte carte__menu--type">
                             <h4 class="cascade__position6">PLATS</h4>
@@ -84,12 +92,14 @@
                                     <h3 class="selection__nom--nom">Coquilles Saint-Jacques</h3>
                                     <p class="selection__nom--recette">Accompagnées d'une purée de panais</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>40€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_plat_1">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="selection cascade__position8 choix">
                             <input type="checkbox" name="Francaise_plat_2" class="selection--checkbox">
@@ -97,12 +107,14 @@
                                     <h3 class="selection__nom--nom">Magret de canard</h3>
                                     <p class="selection__nom--recette">Et parmentier de pommes de terres</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>35€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_plat_2">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="selection cascade__position9 choix">
                             <input type="checkbox" name="Francaise_plat_3" class="selection--checkbox">
@@ -110,12 +122,14 @@
                                     <h3 class="selection__nom--nom">Pigeonneau d'Ille-et-Vilaine</h3>
                                     <p class="selection__nom--recette">Sur son lit de gnocchis aux légumes</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>44€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_plat_3">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="carte carte__menu--type">
                             <h4 class="cascade__position10">DESSERTS</h4>
@@ -126,12 +140,14 @@
                                     <h3 class="selection__nom--nom">Pétales de violettes glacées</h3>
                                     <p class="selection__nom--recette">Et purées de noisettes</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>18€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_dessert_1">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="selection cascade__position12 choix">
                             <input type="checkbox" name="Francaise_dessert_2" class="selection--checkbox">
@@ -139,12 +155,14 @@
                                     <h3 class="selection__nom--nom">Fondant au chocolat</h3>
                                     <p class="selection__nom--recette">Revisité</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>22€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_dessert_2">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="selection cascade__position13 choix">
                             <input type="checkbox" name="Francaise_dessert_3" class="selection--checkbox">
@@ -152,12 +170,14 @@
                                     <h3 class="selection__nom--nom">Millefeuille croustillant</h3>
                                     <p class="selection__nom--recette">Myrtilles et pâte d'amande</p>
                                 </div>
-                                <div class="selection__prix">
+                                <div class="selection__prix animation--prix">
                                     <p>23€</p>
                                 </div>
+                                <div class="selection__animation">
                             <label for="Francaise_dessert_3">
                                 <p class="validation"><i class="fas fa-check-circle selection__validation"></i></p>
                             </label>
+                        </div>
                         </div>
                         <div class="cascade__position14">
                             <input type="button" value="Commander" class="button">

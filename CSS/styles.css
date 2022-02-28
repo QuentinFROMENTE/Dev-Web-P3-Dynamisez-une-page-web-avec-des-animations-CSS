@@ -25,7 +25,6 @@ body {
   position: relative;
   align-self: center;
   height: 3rem;
-  width: auto;
   border: none;
   box-shadow: none;
 }
@@ -33,8 +32,8 @@ body {
   font-size: 2rem;
   align-self: center;
   height: 2rem;
-  width: 2rem;
-  right: 1.3rem;
+  width: 10%;
+  padding-left: 5%;
   color: #000000;
   overflow: visible;
 }
@@ -94,6 +93,7 @@ body {
   align-items: center;
   font-weight: bold;
   border: none;
+  margin-bottom: 2rem;
   font-weight: normal;
   align-self: center;
   width: auto;
@@ -106,6 +106,14 @@ body {
   padding-bottom: 1rem;
   overflow-y: hidden;
 }
+@media screen and (min-width: 429px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+}
 .fonctionnement--texte {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -115,19 +123,48 @@ body {
   color: #9356DC;
   font-size: 1.2rem;
   position: relative;
-  top: 1.8rem;
-  left: 0.7rem;
+  top: 1.6rem;
+  left: 2%;
   padding-bottom: 0rem;
 }
 .fonctionnement__numerotation--cercle {
-  height: 2rem;
+  font-size: 1.5rem;
+  position: relative;
+  right: 0rem;
+}
+@media screen and (min-width: 429px) and (max-width: 1023px) {
+  .fonctionnement__numerotation--cercle {
+    width: 2rem;
+    position: relative;
+    right: 25.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__numerotation--cercle {
+    position: relative;
+    right: 18%;
+  }
 }
 .fonctionnement__numerotation--chiffre {
   color: #F2F2F2;
   position: relative;
-  top: -1.8rem;
-  font-size: 0.7rem;
+  top: -1.45rem;
+  font-size: 1.1rem;
   left: 0.4rem;
+}
+@media screen and (min-width: 429px) and (max-width: 1023px) {
+  .fonctionnement__numerotation--chiffre {
+    position: relative;
+    left: unset;
+    right: 26%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__numerotation--chiffre {
+    left: unset;
+    position: relative;
+    right: 18%;
+  }
 }
 .fonctionnement__encadree {
   background-color: #F2F2F2;
@@ -146,19 +183,30 @@ body {
   padding-top: 0rem;
   width: 85%;
 }
+@media screen and (min-width: 429px) and (max-width: 1023px) {
+  .fonctionnement__encadree {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__encadree {
+    width: 30%;
+  }
+}
 .fonctionnement__encadree--violet {
   background-color: #F1EAFB;
 }
 .fonctionnement__encadree--icone {
   font-size: 1.2rem;
   color: #999999;
-  width: 1.2rem;
+  width: 2rem;
   height: 1.3rem;
   padding-left: 0.5rem;
 }
 .fonctionnement__encadree--icone--violet {
   color: #9356DC;
   padding-left: 0.5rem;
+  width: 2rem;
 }
 .fonctionnement__encadree--texte {
   font-weight: bold;
@@ -167,6 +215,11 @@ body {
   position: static;
   box-shadow: none;
 }
+@media screen and (min-width: 429px) {
+  .fonctionnement__encadree--texte {
+    width: 90%;
+  }
+}
 
 .navigation {
   width: 100%;
@@ -174,8 +227,16 @@ body {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
+@media screen and (min-width: 429px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .navigation h1 {
   padding-left: 5%;
+  width: 100%;
 }
 .navigation a {
   text-decoration: none;
@@ -194,6 +255,16 @@ body {
   padding-bottom: 0rem;
   padding-top: 0rem;
 }
+@media screen and (min-width: 429px) and (max-width: 1440px) {
+  .navigation__miniature {
+    width: 42.5%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .navigation__miniature {
+    width: 19%;
+  }
+}
 .navigation__miniature--photo {
   width: 100%;
   height: 11rem;
@@ -205,21 +276,20 @@ body {
   margin-bottom: 0rem;
 }
 .navigation__miniature--nouveau {
-  display: inline-block;
   font-size: 1rem;
   font-weight: bold;
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;
   height: 1.5rem;
-  width: 19%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: fit-content;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #99E2D0;
   color: #2D9F83;
   border-radius: 0.2rem;
   position: relative;
   bottom: 19rem;
-  left: 14rem;
+  left: 60%;
   z-index: 2;
 }
 .navigation__miniature--nom {
@@ -243,10 +313,11 @@ body {
   color: #000000;
   position: relative;
   bottom: 1rem;
-  left: 18rem;
+  left: 75%;
 }
 
 .footer {
+  clear: both;
   background-color: #333333;
   width: 100%;
   display: flex;
@@ -262,6 +333,7 @@ body {
   padding-left: 3%;
   flex-direction: row;
   align-items: center;
+  overflow-y: hidden;
 }
 .footer__fonts--texte {
   width: 80%;
@@ -294,6 +366,11 @@ body {
   object-fit: cover;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .carte__photo {
+    height: 30rem;
+  }
+}
 .carte__menu {
   background-color: #F2F2F2;
   width: 100%;
@@ -315,12 +392,30 @@ body {
   padding-bottom: 1.5rem;
   font-size: 1.6rem;
 }
+@media screen and (min-width: 1024px) {
+  .carte__menu--nom {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 .carte__menu--type {
   font-size: 1rem;
   padding-left: 1rem;
   font-weight: lighter;
   padding-bottom: 1rem;
   padding-top: 2rem;
+  text-decoration: underline #99E2D0;
+  text-decoration-thickness: 0.3rem;
+}
+@media screen and (min-width: 1024px) {
+  .carte__menu--type {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.font {
+  background-color: #F2F2F2;
 }
 
 .selection {
@@ -329,31 +424,60 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
   margin-left: 2.5%;
   height: 5rem;
   margin-bottom: 1rem;
   box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
+@media screen and (min-width: 1024px) {
+  .selection {
+    width: 45%;
+    margin-left: 27.5%;
+  }
+}
 .selection--checkbox {
   display: none;
 }
 .selection__nom {
+  z-index: 1;
   flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .selection__nom--nom {
   padding-top: 0.5rem;
   padding-left: 1rem;
   font-family: "Roboto";
+  height: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .selection__nom--recette {
   padding-top: 1rem;
   padding-left: 1rem;
   font-family: "Roboto";
   font-weight: lighter;
+  height: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .selection__prix {
   align-self: flex-end;
+  width: 4rem;
+  z-index: 3;
+  padding-bottom: 0.5rem;
+}
+@supports not (-moz-appearance: none) {
+  .selection__prix {
+    position: relative;
+    left: 5rem;
+  }
 }
 .selection__validation {
   content: "";
@@ -361,6 +485,22 @@ body {
   position: relative;
   top: 1.5rem;
   left: 1.5rem;
+}
+.selection__animation {
+  background-color: white;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: -1;
+  visibility: collapse;
+  line-height: 0;
+  /*display: none;*/
+}
+
+.choix:hover .selection__animation {
+  z-index: 2;
+  visibility: visible;
 }
 
 .button {
@@ -378,6 +518,7 @@ body {
   align-items: center;
   font-weight: bold;
   border: none;
+  margin-bottom: 2rem;
   margin-left: 25%;
 }
 
@@ -397,8 +538,8 @@ body {
 }
 
 .favoris2 {
-  left: 0.2rem;
-  bottom: 1.5rem;
+  left: 0.21rem;
+  bottom: 1.53rem;
   opacity: 0;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -422,7 +563,7 @@ body {
   width: 2rem;
   position: relative;
   bottom: 3.5rem;
-  left: 18rem;
+  left: 85%;
   z-index: 1;
 }
 .favoris--carte {
@@ -478,10 +619,15 @@ body {
 }
 .validation {
   visibility: hidden;
-  width: 5rem;
+  width: 8rem;
   height: 5rem;
   background-color: #99E2D0;
   color: white;
+}
+@media screen and (min-width: 429px) {
+  .validation {
+    width: 7rem;
+  }
 }
 .validation--checked {
   color: white;
@@ -491,8 +637,14 @@ body {
   display: none;
 }
 
+.choix:hover .animation--prix {
+  animation: validation 1s backwards ease-in-out;
+  left: 0rem;
+}
+
 .choix:hover .validation {
   visibility: visible;
+  /*display: contents;*/
   animation: validation 1s both ease-in-out;
 }
 .choix:hover .validation i {
@@ -531,6 +683,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100rem;
+  font-size: 4rem;
   visibility: visible;
   animation: loader 2s backwards;
   background-color: white;
@@ -540,11 +693,48 @@ body {
 
 .utensils {
   animation: utensils 2s ease-in-out;
+  position: absolute;
+  margin-left: 35%;
+  height: 4rem;
+}
+@media screen and (min-width: 429px) and (max-width: 1023px) {
+  .utensils {
+    margin-left: 20%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .utensils {
+    margin-left: 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .utensils {
+    margin-left: 10%;
+  }
 }
 
 .nom {
   animation: nom 2s ease-in-out forwards;
   font-family: "Shrikhand";
+  position: absolute;
+  top: 20rem;
+  width: 100%;
+  margin-left: 5%;
+}
+@media screen and (min-width: 429px) and (max-width: 1023px) {
+  .nom {
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nom {
+    margin-left: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .nom {
+    margin-left: 35%;
+  }
 }
 
 @keyframes utensils {
@@ -566,9 +756,12 @@ body {
     z-index: 2;
     opacity: 1;
   }
+  90% {
+    opacity: 1;
+  }
   100% {
     z-index: 2;
-    opacity: 1;
+    opacity: 0;
   }
 }
 .cascade__position1 {

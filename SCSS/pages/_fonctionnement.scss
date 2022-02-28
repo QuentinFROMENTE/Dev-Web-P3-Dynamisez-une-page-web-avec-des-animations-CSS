@@ -4,6 +4,12 @@
     width: 100%;
     padding-bottom: 1rem;
     overflow-y: hidden;
+    @media screen and (min-width: 429px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+    }
     &--texte {
         padding-top: 3rem;
         padding-bottom: 2rem;
@@ -13,18 +19,39 @@
         color: $color-primary;
         font-size: 1.2rem;
         position: relative;
-        top: 1.8rem;
-        left: 0.7rem;
+        top: 1.6rem;
+        left: 2%;
         padding-bottom: 0rem;
         &--cercle {
-            height: 2rem;
+            font-size: 1.5rem;
+            position: relative;
+            right: 0rem;
+            @media screen and (min-width: 429px) and (max-width: 1023px){
+                width: 2rem;
+                position: relative;
+                right: 25.5%;
+            }
+            @media screen and (min-width :1024px) {
+                position: relative;
+                right: 18%;
+            }
         }
         &--chiffre {
             color: $background-lightgrey;
             position: relative;
-            top: -1.8rem;
-            font-size: 0.7rem;
+            top: -1.45rem;
+            font-size: 1.1rem;
             left: 0.4rem;
+            @media screen and (min-width: 429px) and (max-width: 1023px) {
+                position: relative;
+                left: unset;
+                right: 26%;                
+            }
+            @media screen and (min-width :1024px) {
+                left: unset;
+                position: relative;
+                right: 18%;
+            }
         }
     }
     &__encadree {
@@ -43,18 +70,25 @@
         padding-bottom: 0rem;
         padding-top: 0rem;
         width: 85%;
+        @media screen and (min-width: 429px) and (max-width: 1023px) {
+            width: 45%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+        }
         &--violet {
             background-color: $background-purplegrey;
         }
         &--icone {
             font-size: 1.2rem;
             color: $fontcolor-icone;
-            width: 1.2rem;
+            width: 2rem;
             height: 1.3rem;
             padding-left: 0.5rem;
             &--violet{
                 color: $color-primary;
                 padding-left: 0.5rem;
+                width: 2rem;
             }
         }
         &--texte {
@@ -63,6 +97,9 @@
             height: 1.3rem;
             position: static;
             box-shadow: none;
+            @media screen and (min-width: 429px) {
+                width: 90%;
+            }
         }
     }
 
