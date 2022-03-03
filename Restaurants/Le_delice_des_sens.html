@@ -1,208 +1,210 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ohmyfood : Le délice des sens</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <link rel="stylesheet" href="../CSS/styles.css">
-        <meta name="author" content="Quentin FROMENTÉ">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    </head>
-    <body class="font">
-        <header class="header">
-            <div class="header__title header__back-arrow">
-                <a href="../index.html">
-                    <i class="fas fa-arrow-left header__title header__back-arrow"></i>
-                </a>
-            </div>
-            <div class="header header__title">
-                <img src="../Assets/Logos/ohmyfood@2x.svg" alt="Logo Ohmyfood">
-            </div>
-        </header>
-        <picture class="carte carte__photo">
-            <img src="../Assets/Photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="À la française" class="carte carte__photo">
-        </picture>
-        <section class="carte">
-            <div class="carte carte__menu">
-                <div class="carte__menu--nom cascade__position1">
-                    <p>Le délice des sens</p>
-                    <div class="favoris--carte">
-                        <i class="far fa-heart navigation__miniature--icone favoris1--carte"></i>
-                        <i class="fas fa-heart navigation__miniature--icone favoris2--carte"></i>
-                    </div>
-                </div>
-                <div>
-                    <form method="post" action="#">
-                        <div class="carte carte__menu--type cascade__position2">
-                            <h4>ENTRÉES</h4>
-                        </div>
-                        <div class="selection cascade__position3 choix">
-                            <input type="checkbox" name="delice_entre_1" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Tartare de thon</h3>
-                                    <p class="selection__nom--recette">Assaisonné au yuzu</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>25€</p>
-                                </div>
-                                <label for="delice_entre_1">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position4 choix">
-                            <input type="checkbox" name="delice_entre_2" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Bouchée de homard croustillant</h3>
-                                    <p class="selection__nom--recette">Et sa farandole de petits légumes</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>35€</p>
-                                </div>
-                                <label for="delice_entre_2">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position5 choix">
-                            <input type="checkbox" name="delice_entre_3" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Velouté de cèpes</h3>
-                                    <p class="selection__nom--recette">Aux truffes</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>20€</p>
-                                </div>
-                                <label for="delice_entre_3">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="carte carte__menu--type">
-                            <h4 class="cascade__position6">PLATS</h4>
-                        </div>
-                        <div class="selection cascade__position7 choix">
-                            <input type="checkbox" name="delice_plat_1" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Poulet rôti aux herbes de provence</h3>
-                                    <p class="selection__nom--recette">Et sa purée de panais</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>40€</p>
-                                </div>
-                                <label for="delice_plat_1">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position8 choix">
-                            <input type="checkbox" name="delice_plat_2" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Langouste rôtie</h3>
-                                    <p class="selection__nom--recette">Et ses légumes de saison</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>35€</p>
-                                </div>
-                                <label for="delice_plat_2">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position9 choix">
-                            <input type="checkbox" name="delice_plat_3" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Côte de boeuf angus</h3>
-                                    <p class="selection__nom--recette">Et sa purée de panais</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>44€</p>
-                                </div>
-                                <label for="delice_plat_3">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="carte carte__menu--type">
-                            <h4 class="cascade__position10">DESSERTS</h4>
-                        </div>
-                        <div class="selection cascade__position11 choix">
-                            <input type="checkbox" name="delice_dessert_1" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Farandole de desserts</h3>
-                                    <p class="selection__nom--recette">Du chef</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>18€</p>
-                                </div>
-                                <label for="delice_dessert_1">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position12 choix">
-                            <input type="checkbox" name="delice_dessert_2" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Crème brulée</h3>
-                                    <p class="selection__nom--recette">Revisitée</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>22€</p>
-                                </div>
-                                <label for="delice_dessert_2">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="selection cascade__position13 choix">
-                            <input type="checkbox" name="delice_dessert_3" class="selection--checkbox">
-                                <div class="selection__nom">
-                                    <h3 class="selection__nom--nom">Tiramisu</h3>
-                                    <p class="selection__nom--recette">À la noisette</p>
-                                </div>
-                                <div class="selection__prix animation--prix">
-                                    <p>23€</p>
-                                </div>
-                                <label for="delice_dessert_3">
-                                <div class="selection__animation">
-                                <div><p class="validation"><i class="fas fa-check-circle selection__validation"></i></p></div>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="cascade__position14">
-                            <input type="button" value="Commander" class="button">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <p class="footer__fonts footer__fonts--logo">ohmyfood</p>
-            <a href="#" class="footer__fonts">
-                <p class="footer__fonts footer__fonts--texte">
-                <i class="fas fa-utensils footer__fonts--icone"></i>
-                Proposer un restaurant</p>
-            </a>
-            <a href="#" class="footer__fonts">
-                <p class="footer__fonts footer__fonts--texte">
-                    <i class="fas fa-hands-helping footer__fonts--icone footer__fonts--taille"></i>
-                    Devenir partenaire</p>
-            </a>
-            <a href="#" class="footer__fonts">
-                <p class="footer__fonts footer__fonts--texte">Mentions légales</p>
-            </a>
-            <a href="mailto:contact@ohmyfood.fr" class="footer__fonts">
-                <p class="footer__fonts footer__fonts--texte">Contact</p>
-            </a>
-        </footer>
-    </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ohmyfood : Le délice des sens</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+		<link rel="stylesheet" href="../CSS/styles.css">
+		<meta name="author" content="Quentin FROMENTÉ">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	</head>
+	<body class="font">
+		<header class="header">
+			<div class="header__title header__back-arrow">
+				<a href="../index.html">
+				<i class="fas fa-arrow-left header__title header__back-arrow"></i>
+				</a>
+			</div>
+			<div class="header header__title">
+				<img src="../Assets/Logos/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+			</div>
+		</header>
+		<picture class="carte carte__photo">
+			<img src="../Assets/Photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="À la française" class="carte carte__photo">
+		</picture>
+		<section class="carte">
+			<div class="carte carte__menu">
+				<div class="carte__menu--nom cascade__position1">
+					<p>Le délice des sens</p>
+					<div class="favoris--carte">
+						<i class="far fa-heart navigation__miniature--icone favoris1--carte"></i>
+						<i class="fas fa-heart navigation__miniature--icone favoris2--carte"></i>
+					</div>
+				</div>
+				<div>
+					<form method="post" action="#">
+						<div class="carte carte__menu--type cascade__position2">
+							<h4>ENTRÉES</h4>
+						</div>
+						<div class="selection cascade__position3 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Tartare de thon</h3>
+								<p class="selection__nom--recette">Assaisonné au yuzu</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>25€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_entre_1" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position4 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Bouchée de homard croustillant</h3>
+								<p class="selection__nom--recette">Et sa farandole de petits légumes</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>35€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_entre_2" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position5 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Velouté de cèpes</h3>
+								<p class="selection__nom--recette">Aux truffes</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>20€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_entre_3" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="carte carte__menu--type">
+							<h4 class="cascade__position6">PLATS</h4>
+						</div>
+						<div class="selection cascade__position7 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Poulet rôti aux herbes de provence</h3>
+								<p class="selection__nom--recette">Et sa purée de panais</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>40€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_plat_1" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position8 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Langouste rôtie</h3>
+								<p class="selection__nom--recette">Et ses légumes de saison</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>35€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_plat_2" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position9 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Côte de boeuf angus</h3>
+								<p class="selection__nom--recette">Et sa purée de panais</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>44€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_plat_3" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="carte carte__menu--type">
+							<h4 class="cascade__position10">DESSERTS</h4>
+						</div>
+						<div class="selection cascade__position11 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Farandole de desserts</h3>
+								<p class="selection__nom--recette">Du chef</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>18€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_dessert_1" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position12 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Crème brulée</h3>
+								<p class="selection__nom--recette">Revisitée</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>22€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_dessert_2" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="selection cascade__position13 choix">
+							<div class="selection__nom">
+								<h3 class="selection__nom--nom">Tiramisu</h3>
+								<p class="selection__nom--recette">À la noisette</p>
+							</div>
+							<div class="selection__prix animation--prix">
+								<p>23€</p>
+							</div>
+							<div class="selection__animation">
+								<label class="validation">
+								<input type="checkbox" name="delice_dessert_3" class="selection--checkbox">
+								<i class="fas fa-check-circle selection__validation"></i>
+								</label>
+							</div>
+						</div>
+						<div class="cascade__position14">
+							<input type="button" value="Commander" class="button">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<p class="footer__fonts footer__fonts--logo">ohmyfood</p>
+			<a href="#" class="footer__fonts">
+				<p class="footer__fonts footer__fonts--texte">
+					<i class="fas fa-utensils footer__fonts--icone"></i>
+					Proposer un restaurant
+				</p>
+			</a>
+			<a href="#" class="footer__fonts">
+				<p class="footer__fonts footer__fonts--texte">
+					<i class="fas fa-hands-helping footer__fonts--icone footer__fonts--taille"></i>
+					Devenir partenaire
+				</p>
+			</a>
+			<a href="#" class="footer__fonts">
+				<p class="footer__fonts footer__fonts--texte">Mentions légales</p>
+			</a>
+			<a href="mailto:contact@ohmyfood.fr" class="footer__fonts">
+				<p class="footer__fonts footer__fonts--texte">Contact</p>
+			</a>
+		</footer>
+	</body>
 </html>

@@ -41,6 +41,12 @@
             font-weight: normal;
             align-self: center;
             width: auto;
+            text-align: center;
+            &:hover {
+                box-shadow: 0.5rem 0.5rem 0.5rem hsl(0°, 0%, 80%);
+                background: none;
+                background-color: $color-secondary;
+            }
         }
     }
 }    
