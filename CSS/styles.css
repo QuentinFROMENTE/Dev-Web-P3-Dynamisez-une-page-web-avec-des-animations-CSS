@@ -472,12 +472,8 @@ body {
   width: 4rem;
   z-index: 3;
   padding-bottom: 0.5rem;
-}
-@supports not (-moz-appearance: none) {
-  .selection__prix {
-    position: relative;
-    left: 5rem;
-  }
+  position: relative;
+  left: 5rem;
 }
 .selection__validation {
   content: "";
@@ -495,7 +491,6 @@ body {
   z-index: -1;
   visibility: collapse;
   line-height: 0;
-  /*display: none;*/
 }
 
 .choix:hover .selection__animation {
@@ -644,7 +639,6 @@ body {
 
 .choix:hover .validation {
   visibility: visible;
-  /*display: contents;*/
   animation: validation 1s both ease-in-out;
 }
 .choix:hover .validation i {

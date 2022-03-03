@@ -49,10 +49,8 @@
         width: 4rem;
         z-index: 3;
         padding-bottom: 0.5rem;
-        @supports not( -moz-appearance:none ){
-            position: relative;
-            left: 5rem;    
-        }
+        position: relative;
+        left: 5rem;
     }
     &__validation {
         content: "";
@@ -70,7 +68,6 @@
         z-index: -1;
         visibility: collapse;
         line-height: 0;
-        /*display: none;*/
     }
 }
 

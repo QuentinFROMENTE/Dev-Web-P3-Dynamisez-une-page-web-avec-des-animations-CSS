@@ -121,7 +121,6 @@
 
 .choix:hover .validation {
     visibility: visible;
-    /*display: contents;*/
     animation: validation 1s both ease-in-out;
     i {
         animation: checked 1s both ease-in-out;
