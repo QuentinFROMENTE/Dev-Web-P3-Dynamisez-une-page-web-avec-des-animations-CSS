@@ -49,6 +49,9 @@
         width: 25vh;
         z-index: 3;
         padding-bottom: 0.5rem;
+        @media screen and (min-width: 429px) {
+            width: 10vh;
+        }
     }
     &__validation {
         font-size: 2rem;

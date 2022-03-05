@@ -492,6 +492,11 @@ body {
   z-index: 3;
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width: 429px) {
+  .selection__prix {
+    width: 10vh;
+  }
+}
 .selection__validation {
   font-size: 2rem;
   position: relative;
