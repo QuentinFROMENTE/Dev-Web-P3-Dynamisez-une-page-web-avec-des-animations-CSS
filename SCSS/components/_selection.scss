@@ -20,7 +20,7 @@
     &__nom {
         z-index: 1;
         flex-direction: column;
-        width: 100%;
+        width: 250vh;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -46,7 +46,7 @@
     }
     &__prix {
         align-self: flex-end;
-        width: 4rem;
+        width: 25vh;
         z-index: 3;
         padding-bottom: 0.5rem;
     }
@@ -63,14 +63,22 @@
         flex-direction: row;
         justify-content: flex-end;
         z-index: -1;
-        visibility: collapse;
-        line-height: 0;
+        position: relative;
+        left: 5rem;
     }
 }
 
 .choix:hover .selection__animation {
     z-index: 2;
-    visibility: visible;
+    left: 0rem;
+}
+
+.choix:hover .selection__nom {
+    width: 100%;
+}
+
+.choix:hover .selection__prix {
+    width: 4rem;
 }
 
 .button {
